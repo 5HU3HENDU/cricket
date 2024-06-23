@@ -1,0 +1,67 @@
+<h1>
+Hello
+</h1>
+
+<textarea width="50%"></textarea>
+
+<div id="ball">
+
+</div>
+<div id="over">
+</div>
+
+
+<div id="score" width="50%">
+lmoa
+
+
+</div>
+
+<script>
+var run = [1,2,'WD','NO']
+
+function score_calc(run) {
+
+var ball = 0;
+var runs = 0;
+var over = [];
+var score = [];
+
+	for(var i = 0; i<run.length;i++) {
+  if(run[i]<=6){
+  ball = ball+1;
+  runs = runs + run[i];
+  }
+  if(run[i]=="WD" | run[i]=="NO"){
+  runs = runs + 1;
+  }
+  over.push(ball);
+  score.push(runs);
+  
+  
+  
+  
+  }
+
+document.getElementById("over").innerText = over;
+document.getElementById("score").innerText = score;
+
+}
+
+
+
+
+document.getElementById('ball').innerText = run;
+score_calc(run);
+
+
+
+
+
+  
+</script>
+
+
+
+
+
